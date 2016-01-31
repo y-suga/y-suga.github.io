@@ -1,0 +1,22 @@
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+h1 {
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+.script {
+  border:solid 1px #000000;
+  border-color: #FFFFFF;
+}
