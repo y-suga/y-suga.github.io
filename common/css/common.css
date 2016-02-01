@@ -16,6 +16,30 @@ a:hover {
   text-decoration: underline
 }
 
+th {
+  padding: 12px 10px 12px 10px;
+  text-align: left;
+}
+
+td {
+  padding: 12px 10px 12px 10px;
+  text-align: left;
+}
+
+.form {
+  boder: 1 solid #FFFFFF;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contents{
+  width: 800px;
+  border: 1px solid #333333;
+  margin: 0 auto;
+  padding: 10px 10px 10px 10px;
+}
+
 .script {
   border:solid 1px #000000;
   border-color: #FFFFFF;
