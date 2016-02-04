@@ -26,18 +26,17 @@ td {
   text-align: left;
 }
 
-.form {
+form {
   boder: 1 solid #FFFFFF;
   width: 400px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.contents{
+#contents{
   width: 800px;
-  border: 1px solid #333333;
   margin: 0 auto;
   padding: 10px 10px 10px 10px;
+  text-align: center;
 }
 
 .script {
