@@ -32,11 +32,13 @@ form {
   margin: 0 auto;
 }
 
-#contents{
+.center{
+  text-align: center;
+}
+.contents{
   width: 800px;
   margin: 0 auto;
   padding: 10px 10px 10px 10px;
-  text-align: center;
 }
 
 .script {
