@@ -87,8 +87,7 @@
         elem = elem + "</ul>";
         document.getElementById("delete").innerHTML = elem;
         function deleteButton(index){
-          element = document.getElementById(index);
-          element.parentNode.removeChild(element);
+          document.getElementById(index).innerHTML = "データ：" + index + "を削除しました。"
         }
 
       -->
