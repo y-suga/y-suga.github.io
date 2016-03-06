@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <title>別ウィンドウ</title>
+  </head>
+  <body>
+    <header>
+      <h1>別ウィンドウ</h1>
+      <hr />
+    </header>
+    <div id="contents" class="center">
+      <form id="form" name="form" action="input.html">
+        <table>
+          <tbody>
+            <tr>
+              <th>ほげ</th>
+              <td>
+                <input type="text" name="hoge" id="hoge"/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button onclick="opener.document.getElementById('hoge').innerHTML=this.form.hoge.value; window.close();">選択</button>
+      </form>
+    </div>
+  </body>
+</html>
