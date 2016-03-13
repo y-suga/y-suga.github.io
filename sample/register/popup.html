@@ -16,14 +16,14 @@
         <table>
           <tbody>
             <tr>
-              <th>ほげ</th>
+              <th>別ウィンドウで入力</th>
               <td>
-                <input type="text" name="hoge" id="hoge"/>
+                <input type="text" name="window_input" id="window_input"/>
               </td>
             </tr>
           </tbody>
         </table>
-        <button onclick="opener.document.getElementById('hoge').innerHTML=this.form.hoge.value; window.close();">選択</button>
+        <button onclick="opener.document.getElementById('window_input').value=this.form.window_input.value; window.close();">選択</button>
       </form>
     </div>
   </body>

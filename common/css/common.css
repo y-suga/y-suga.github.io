@@ -26,13 +26,8 @@ td {
   text-align: left;
 }
 
-form {
-  boder: 1 solid #FFFFFF;
-  width: 400px;
-  margin: 0 auto;
-}
-
 .center{
+  margin: 0 auto;
   text-align: center;
 }
 .contents{

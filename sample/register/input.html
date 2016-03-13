@@ -11,9 +11,9 @@
       <h1>会員登録</h1>
       <hr />
     </header>
-    <div id="contents" class="center">
-      <form id="form" name="form" action="finish.html">
-        <table>
+    <div id="contents">
+      <form id="form" name="form" action="finish.html" class="center">
+        <table class="center">
           <tbody>
             <tr>
               <th>ログインID</th>
@@ -57,10 +57,10 @@
             </tr>
             <tr>
               <th>
-                ほげ
+                別ウィンドウで入力
               </th>
               <td>
-                <span id="hoge">未選択</span>
+                <input type="text" name="window_input" id="window_input">
                 <input type="button"  onclick="window.open('popup.html','_blank', 'width=400,height=400,titlebar=no,toolbar=no')" value="別ウィンドウを開く" />
               </td>
             </tr>
