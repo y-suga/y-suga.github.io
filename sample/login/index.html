@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <style type="text/css">
+      .form__area {
+        border: solid 1px #444444;
+        width: 160px;
+        padding-left: 30px;
+      }
+      .login { margin-bottom: 20px;}
+      .login__label {
+        margin-bottom: 0px;
+      }
+      .login__button {
+        padding-left: 30px;
+        margin-bottom: 20px;
+      }
+      .err_msg{
+        color: red;
+      }
+    <title>ログイン</title>
+  </head>
+  <body>
+    <header>
+      <h1>ログイン</h1>
+      <hr />
+    </header>
+    <div id="contents">
+    </style>
+    <script type="text/javascript">
+      <!--
+        function initialize(){
+          var kanji = ["零番","一番","二番","三番"," 四番","五番","六番","七番","八番","九番"]
+          var gender = ["男性","女性"]
+          if(document.cookie.match(/record/) == null){
+            records = [];
+            for(var i = 1; i < 6; i++){
+              insertUser("id" + ("0" + i).slice(-2), "id" + ("0" + i).slice(-2), "テスト", kanji[i], gender[i%2], "198"+i);
+            }
+            return true;
+          }
+          records = cookieToRecords();
+          return false;
+        }
+
+        function login(id, pw){
+          var user = getUser(id);
+          if(user == null){
+            document.cookie = "failureLogin=true"
+            return false;
+          }else if(user.indexOf("pw:" + pw + ",") >= 0){
+            document.cookie = "loginId=" + id;
+            document.cookie = "failureLogin=;"
+            return true;
+          }else{
+            document.cookie = "failureLogin=true"
+            return false;
+          }
+        }
+
+        function logout(){
+          //有効期限を過去にして書き込む
+          var dTime = new Date();
+          dTime.setYear(dTime.getYear() - 1);
+          document.cookie = "loginId=;expires=" + dTime.toGMTString();
+        }
+
+        function getLoginId(){
+          var loginId = document.cookie.match(/loginId[^;]*/)
+          if(loginId != null){
+            return loginId[0].replace("loginId=","")
+          }
+          else{
+            return null;
+          }
+        }
+
+        function insertUser(id, pw, fName, lName, gender, bYear){
+          var tmp = ["id:"+id,"pw:"+pw,"fName:"+fName,"lName:"+lName,"gender:"+gender,"bYear:"+bYear];
+          var record = "record" + ("0" + (records.length + 1)).slice(-2) + "=" + tmp.join();
+          records.push(record);
+          document.cookie = record;
+        }
+
+        function getUser(id){
+          for(var i = 0; i < records.length; i++){
+            if(records[i].indexOf("id:"+id+",") > 0){
+              return records[i];
+            }
+          }
+          return null;
+        }
+
+        function getUserData(id, key){
+          if(getUser(id) != null){
+            return getUser(id).match(new RegExp(key + ":[^,]*"))[0].replace(key + ":","");
+          }
+          else {
+            return null;
+          }
+        }
+
+        function cookieToRecords(){
+          var tmp_records = [];
+          var cookies = document.cookie.split("; ");
+          for(var i = 0; i < cookies.length; i++){
+            if(cookies[i].match(/record[0-9][0-9]/) != null){
+              tmp_records.push(cookies[i]);
+            }
+          }
+          return tmp_records;
+        }
+
+        function loginForm(){
+          var loginId = document.forms[0].loginId.value;
+          var password = document.forms[0].password.value;
+          login(loginId, password)
+          location.href = location.href.replace(/[?].*/,"");
+        }
+
+        function writeLoginTop(loginId){
+          var lastName = getUserData(loginId,"lName")
+          var firstName = getUserData(loginId,"fName")
+          var text = "<p>ようこそ " + lastName + " " + firstName + " さん</p>";
+          text = text + '<p><a href="index.html" onClick="logout()">ログアウト</a></p>';
+          document.getElementById("contents").innerHTML = text;
+        }
+
+        function writeOpenTop(){
+          var openTop = (function(){/*
+            <div class="form__area">
+              <form name="login">
+                <div class="login">
+                  <p class="login__label">ログインID</p>
+                  <input type="text" name="loginId">
+                  <p class="login__label">パスワード</p>
+                  <input type="password" name="password">
+                </div>
+                <p id="err_msg" class="err_msg"></p>
+                <div class="login__button">
+                  <button type="submit" value="ログイン" onClick='loginForm()''>ログイン</button>
+                </div>
+              </form>
+            </div>
+          */}).toString().match(/\/\*([^]*)\*\//)[1];
+          document.getElementById("contents").innerHTML = openTop;
+          if(document.cookie.match(/failureLogin=true/ != null)){
+            document.getElementById("err_msg").innerHTML = "認証に失敗しました。";
+            document.cookie = "failureLogin=;"
+          }
+        }
+      -->
+    </script>
+      <h1>トップページ</h1>
+      <hr>
+      <div id="contents"></div>
+      <script type="text/javascript">
+        <!--
+          initialize();
+          var loginId = getLoginId();
+          if(loginId == null || loginId == ""){
+            writeOpenTop();
+          }
+          else{
+            writeLoginTop(loginId);
+          }
+        -->
+      </script>
+      <hr>
+      <p>初期状態では以下のidが利用できます。</p>
+      <p>id01, id02, id03, id04, id05</p>
+      <p>※パスワードはいずれもidと同じ</p>
+    </div>
+    <footer>
+      <hr />
+      <a href="../">サンプルページTopへ</a>
+    </footer>
+  </body>
+</html>
