@@ -12,17 +12,34 @@
       <hr />
     </header>
     <div id="contents">
-      <ul>
-        <li>
-          <input type="button" value="alert" onclick="alert('alert')">
-        </li>
-        <li>
-          <input type="button" value="confirm" onclick="confirm('confirm')">
-        </li>
-        <li>
-          <input type="button" value="prompt" onclick="prompt('prompt')">
-        </li>
-      </ul>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <input type="button" value="alert" onclick="alert('alert'); document.getElementById('alert').value='OK'">
+            </td>
+            <td>
+              <input type="text" name="alert" id="alert">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="confirm" onclick="document.getElementById('confirm').value=confirm('confirm');">
+            </td>
+            <td>
+              <input type="text" name="confirm" id="confirm">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="prompt" onclick="document.getElementById('prompt').value = prompt('prompt');">
+            </td>
+            <td>
+              <input type="text" name="prompt" id="prompt">
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <footer>
       <hr />
