@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../common/css/common.css" />
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <title>パーツ1</title>
+  </head>
+  <body>
+    <header>
+      <h1>パーツ1</h1>
+      <hr />
+    </header>
+    <div id="contents">
+      <form>
+        <table>
+          <tbody>
+            <tr>
+              <th>リンク</th>
+              <td><a href="../">link_text</a></td>
+            </tr>
+            <tr>
+              <th>テキストボックス</th>
+              <td>
+                <input name="textbox" size="20" type="text" value="" />
+                <input name="textboxDisabled" size="20" type="text" disabled value="disabled" />
+              </td>
+            </tr>
+            <tr>
+              <th>パスワードフィールド</th>
+              <td>
+                <input name="password" size="20" type="password" />
+                <input name="passwordDisabled" size="20" type="password" disabled value="disabled"/>
+              </td>
+            </tr>
+            <tr>
+              <th>テキストエリア</th>
+              <td>
+                <textarea cols="40" name="textarea" rows="2"></textarea>
+                <textarea cols="40" name="textareaDisabled" rows="2" disabled>disabled</textarea>
+              </td>
+            </tr>
+            <tr>
+              <th>ファイルフィールド</th>
+              <td>
+                <input name="file" type="file" />
+                <input name="fileDisabled" type="file" disabled value="disabled"/>
+              </td>
+            </tr>
+            <tr>
+              <th>ラジオボタン</th>
+              <td>
+                <input name="radio" type="radio" value="radio1" />
+                <label>radio</label>
+                <input checked="" name="radio" type="radio" value="radio2" />
+                <label>checked</label>
+                <input disabled="" name="radio" type="radio" value="radio3" />
+                <label>disabled</label>
+              </td>
+            </tr>
+            <tr>
+              <th>チェックボックス</th>
+              <td>
+                <input name="checkbox" type="checkbox" value="checkbox1" />
+                <label>checkbox</label>
+                <input checked="" name="checkbox2" type="checkbox" value="checkbox2" />
+                <label>checked</label>
+                <input disabled="" name="checkbox3" type="checkbox" value="checkbox3" />
+                <label>disabled</label>
+              </td>
+            </tr>
+            <tr>
+              <th>セレクトボックス/ドロップダウン/プルダウン</th>
+              <td>
+                <select name="select">
+                  <option value="option1">option1</option>
+                  <option selected value="option2">selected</option>
+                  <option value="option3">option3</option>
+                  <option disabled value="option4">disabled</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>マルチセレクト/リスト</th>
+              <td>
+                <select name="multi-select" size="3" multiple>
+                  <option value="option1">option1</option>
+                  <option selected="" value="selected">selected</option>
+                  <option disabled="" value="disabled">disabled</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>ボタン</th>
+              <td>
+                <input type="submit" name="submit" value="submit">
+                <button name="button">&lt;button&gt;</button>
+                <button name="button" disabled>disabled</button>
+              </td>
+            </tr>
+            <tr>
+              <th>ダイアログ</th>
+              <td>
+                <ul>
+                  <li>
+                    <input type="button" value="alert" onclick="alert('alert'); document.getElementById('alert').value='OK'">
+                    <input type="text" name="alert" id="alert">
+                  </li>
+                  <li>
+                    <input type="button" value="confirm" onclick="document.getElementById('confirm').value=confirm('confirm');">
+                    <input type="text" name="confirm" id="confirm">
+                  </li>
+                  <li>
+                    <input type="button" value="prompt" onclick="document.getElementById('prompt').value = prompt('prompt');">
+                    <input type="text" name="prompt" id="prompt">
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>フレーム</th>
+              <td>
+                <iframe src="iframe.html" name="iframe" id="iframe" width="400" height="60">iframe対応のブラウザでご覧ください。</iframe>
+              </td>
+            </tr>
+            <tr>
+              <th>ウィンドウ</th>
+              <td>
+                <div>
+                  別ウィンドウから入力
+                  <input type="text" name="window_input" id="window_input">
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      &lt;a href="popup.html" target="_blank"&gt;
+                      <a href="popup.html" target="_blank">新しいウィンドウで開く</a>
+                    </li>
+                    <li>
+                      window.open('popup.html','mywindow')
+                      <input type="button"  onclick="window.open('popup.html','mywindow','width=400,height=400,titlebar=no,toolbar=no')" value="新しいウィンドウを開く" />
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <footer>
+      <hr />
+      <a href="../">サンプルページTopへ</a>
+    </footer>
+  </body>
+</html>
